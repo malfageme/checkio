@@ -19,7 +19,7 @@ class Building:
         return self.area()*self.height
 
     def __repr__(self):
-        return "Building(%s, %s, %s, %s, %s)" % (self.south,self.west,self.width_WE,self.width_NS,self.height)
+        return "%s(%s, %s, %s, %s, %s)" % (self.__class__.__name__,self.south,self.west,self.width_WE,self.width_NS,self.height)
 
 
 if __name__ == '__main__':
