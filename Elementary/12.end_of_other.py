@@ -1,5 +1,6 @@
 def checkio(words_set):
-    return any([check.rfind(word)!=-1 and len(check) - check.rfind(word) == len(word) for check in words_set for word in words_set if check != word])
+    return any([check.endswith(word) for check in words_set for word in words_set if check != word])
+    #return any([check.rfind(word)!=-1 and len(check) - check.rfind(word) == len(word) for check in words_set for word in words_set if check != word])
     
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
