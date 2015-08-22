@@ -1,5 +1,5 @@
 def checkio(numbers_array):
-    return map(lambda x: numbers_array[x[0]], sorted(enumerate(numbers_array), key=lambda x: abs(x[1])))
+    return sorted(numbers_array, key=abs)
 
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
