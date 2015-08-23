@@ -1,5 +1,5 @@
 def checkio(time_string):
-    format_number=lambda n,p: ("{0:#0%db}"%(p+2)).format(int(n))[2:]
+    format_number=lambda n,p: "{0:0{1}b}".format(int(n),p)
     
     h,m,s = time_string.split(":")
     h = ('0' if len(h)==1 else '') + h
