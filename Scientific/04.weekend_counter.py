@@ -10,7 +10,7 @@ def checkio(from_date, to_date):
             yield d
             d += timedelta(1)
             
-    return sum([1 for day in days_in_range(from_date,to_date) if day.weekday() in [5,6]])
+    return sum([day.weekday() > 4 for day in days_in_range(from_date,to_date)])
     
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
